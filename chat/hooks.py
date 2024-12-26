@@ -17,15 +17,15 @@ is_frappe_above_v13 = int(frappe_version.split('.')[0]) > 13
 
 # include js, css files in header of desk.html
 app_include_css = ['chat.bundle.css'] if is_frappe_above_v13 else [
-    '/assets/css/chat.css']
+    '/public/scss/chat.scss']
 app_include_js = ['chat.bundle.js'] if is_frappe_above_v13 else [
-    '/assets/js/chat.js']
+    '/public/js/chat.js']
 
 # include js, css files in header of web template
 web_include_css = ['chat.bundle.css'] if is_frappe_above_v13 else [
-    '/assets/css/chat.css']
+    '/public/scss/chat.scss']
 web_include_js = ['chat.bundle.js'] if is_frappe_above_v13 else [
-    '/assets/js/chat.js']
+    '/public/js/chat.js']
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "chat/public/scss/website"
@@ -190,7 +190,7 @@ after_install = "chat.patches.migrate_chat_data.execute"
 # ]
 
 sounds = [
-    {'name': 'chat-notification', 'src': '/assets/chat/sounds/chat-notification.mp3', 'volume': 0.2},
-    {'name': 'chat-message-send', 'src': '/assets/chat/sounds/chat-message-send.mp3', 'volume': 0.2},
-    {'name': 'chat-message-receive', 'src': '/assets/chat/sounds/chat-message-receive.mp3', 'volume': 0.5}
+    {'name': 'chat-notification', 'src': '/public/chat/sounds/chat-notification.mp3', 'volume': 0.2},
+    {'name': 'chat-message-send', 'src': '/public/chat/sounds/chat-message-send.mp3', 'volume': 0.2},
+    {'name': 'chat-message-receive', 'src': '/public/chat/sounds/chat-message-receive.mp3', 'volume': 0.5}
 ]

@@ -9,7 +9,7 @@ $font-size-4xl: 2.25rem;
 $font-size-5xl: 3rem;
 $font-size-6xl: 4rem;
 $padding-chat-lr: 12px;
-$height: 582px;
+$height: 450px;
 
 @function calc_height($height, $offset) {
   $result: $height - 16px - 39px - 3.5px - 33px - $offset;
@@ -18,7 +18,7 @@ $height: 582px;
 
 .chat-app {
   position: fixed;
-  bottom: 24px;
+  bottom: 0px;
   right: 0px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ $height: 582px;
   justify-content: flex-end;
   width: 100%;
   max-width: 385px;
-  z-index: 1030;
+  z-index: 1040;
   padding: 0 1rem;
   ::-webkit-scrollbar {
     width: 2px;
